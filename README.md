@@ -15,9 +15,22 @@ It is pretty clear from above references that the play is conducted in several v
 - Doubling is not allowed after Split.
 
 ##How to play:
------------
+----------
 
-You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code that answers Yes/No based on chosen playing strategy.
+Execute the runnable jar file
+
+
+```
+git clone $URL
+cd blackJack
+java -jar run/InsightBlackJack.jar
+```
+
+You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code to answers Yes/No. A Yes/No is based on [playing strategy](i-extensible) chosen (see below). To run the simulation, use following:
+
+```
+java -jar run/InsightBlackJackRandomSimulation.jar
+```
 
 The questions are as follows:
 -  Are you ready to start the game?
