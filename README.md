@@ -11,18 +11,18 @@ b. http://www.blackjackinfo.com/blackjack-rules.php
 It is pretty clear from above references that the play is conducted in several variations. The code assumes most generic variation in all. Hence, the following are to be noted:
 
 A. Dealer stands on all 17's including soft 17.
-
 B. Split allowed only once
-
 C. Doubling is not allowed after Split.
-
 
 How to play:
 
 You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code that answers Yes/No based on chosen playing strategy.
+
 The questions are as follows:
-- Are you ready to start the game
-- 
+- Are you ready to start the game?
+- Do you want to double down?
+- Hit(y)/Stand(n)
+(Process repeats)
 
 
 Overview of the code:
