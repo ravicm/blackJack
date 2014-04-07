@@ -67,27 +67,27 @@ src
   resources 
     Card.java  - Describe the real world Card of deck. Each deck has real value and blackjack face value.
     Deck.java  - Deck of 52 cards
-			Table.java - Contains dealer, shoe(/deck)
+    Table.java - Contains dealer, shoe(/deck)
 			
   extensible (Described above)
-			BettingStrategy.java 
-			RandomBettingStrategy.java 
-			SimpleBettingStrategy.java 
-      MartingaleBettingStrategy.java 
+    BettingStrategy.java 
+    RandomBettingStrategy.java 
+    SimpleBettingStrategy.java 
+    MartingaleBettingStrategy.java 
       
-      Simulator.java 
-      SmartSimulator.java 
-      RandomSimulator.java 
+    Simulator.java 
+    SmartSimulator.java 
+    RandomSimulator.java 
       
-      PaymentRatio.java 
-      SimplePaymentRatio.java 
+    PaymentRatio.java 
+    SimplePaymentRatio.java 
       
   util 
-			utilities.java - Print info output and other utilities
+    utilities.java - Print info output and other utilities
 			
-	participants 
-			actions.java - Interface to define actions to be known by every participant
-			Player.java - A customisable player
-			Participant.java - Particpant, extended to player or dealer
-			Dealer.java - A customisable Dealer 
+  participants 
+    actions.java - Interface to define actions to be known by every participant
+    Player.java - A customisable player
+    Participant.java - Particpant, extended to player or dealer
+    Dealer.java - A customisable Dealer 
 			```
