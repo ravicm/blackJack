@@ -42,7 +42,7 @@ The questions are as follows:
 ---------
 
 
-###The code is divided into four packages:
+###The code is organised into four packages:
 
 ####I. Extensible: 
 
