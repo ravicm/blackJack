@@ -5,23 +5,23 @@ Text-based blackJack game
 
 The game is designed using the rules descibed from the following references:
 
-a. http://en.wikipedia.org/wiki/Blackjack
-b. http://www.blackjackinfo.com/blackjack-rules.php
+  * http://en.wikipedia.org/wiki/Blackjack
+  * http://www.blackjackinfo.com/blackjack-rules.php
 
 It is pretty clear from above references that the play is conducted in several variations. The code assumes most generic variation in all. Hence, the following are to be noted:
 
-A. Dealer stands on all 17's including soft 17.
-B. Split allowed only once
-C. Doubling is not allowed after Split.
+- Dealer stands on all 17's including soft 17.
+- Split allowed only once
+- Doubling is not allowed after Split.
 
 How to play:
 
 You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code that answers Yes/No based on chosen playing strategy.
 
 The questions are as follows:
-- Are you ready to start the game?
-- Do you want to double down?
-- Hit(y)/Stand(n)
+-  Are you ready to start the game?
+-  Do you want to double down?
+-  Hit(y)/Stand(n)
 (Process repeats)
 
 
@@ -33,9 +33,11 @@ I. Extensible:
 
 This contains  interfaces to extension points of the game. A sample class has been provided and used. You can choose to extend the game by implementing the provided interfaces. A brief description of extenstion points is given below:
 
-1. Playing strategy (Interface: Simulator): Given a hand, one card of dealer. You can plan to take a hit or stand by implementing Simulator to say Yes/No for hit/stand. Sample simulators included are: 
-   a. Random simulator (Class: RandomSimulator) choses Hit/Stand randomly.  
-   b. Smart simulator (Class: SmartSimulator) is not completely implemented but the idea is to let you decide intellegintly based on hand and dealer card.
+1. Playing strategy (Interface: Simulator): Given a hand and one card of dealer. You can plan to take a hit or stand by implementing Simulator to say Yes/No for hit/stand. 
+Sample simulators included are: 
+
+  1. Random simulator (Class: RandomSimulator) choses Hit/Stand randomly.  
+  2. Smart simulator (Class: SmartSimulator) is not completely implemented but the idea is to let you decide intellegintly based on hand and dealer card.
 
 2. Payout Ratio (Interface: PaymentRatio): Some casinos pay 3:2 if player gets blackjack some dont. Some casinos pay 1:2 if dealer is busted. You can implement the interface PaymentRatio. Sample PaymentRatio's implemented is SimplePaymentRatio.
 
