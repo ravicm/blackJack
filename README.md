@@ -59,7 +59,7 @@ IV: Util:
 Contains utilities required for the game. The main idea behind this to keep it expandable. However, they are not the extenstion points for the game. For example: print is used to print to System.out but more advanced packages like logger can be used to further enhance the code.
 
 One line description of the included classes:
-
+`
 src
   gameController 
 			Game.java  - Starting point for execution of the game
@@ -90,3 +90,4 @@ src
 			Player.java - A customisable player
 			Participant.java - Particpant, extended to player or dealer
 			Dealer.java - A customisable Dealer 
+			`
