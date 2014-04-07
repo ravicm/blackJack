@@ -35,15 +35,15 @@ Overview of the code:
 
 This contains  interfaces to extension points of the game. A sample class has been provided and used. You can choose to extend the game by implementing the provided interfaces. A brief description of extenstion points is given below:
 
-1. Playing strategy (Interface: Simulator): Given a hand and one card of dealer. You can plan to take a hit or stand by implementing Simulator to say Yes/No for hit/stand. 
+**1. Playing strategy (Interface: Simulator):** Given a hand and one card of dealer. You can plan to take a hit or stand by implementing Simulator to say Yes/No for hit/stand. 
 Sample simulators included are: 
 
   1. Random simulator (Class: RandomSimulator) choses Hit/Stand randomly.  
   2. Smart simulator (Class: SmartSimulator) is not completely implemented but the idea is to let you decide intellegintly based on hand and dealer card.
 
-2. Payout Ratio (Interface: PaymentRatio): Some casinos pay 3:2 if player gets blackjack some dont. Some casinos pay 1:2 if dealer is busted. You can implement the interface PaymentRatio. Sample PaymentRatio's implemented is SimplePaymentRatio.
+**2. Payout Ratio (Interface: PaymentRatio):** Some casinos pay 3:2 if player gets blackjack some dont. Some casinos pay 1:2 if dealer is busted. You can implement the interface PaymentRatio. Sample PaymentRatio's implemented is SimplePaymentRatio.
 
-3. Betting strategy (Interface: BettingStrategy): Player has to bet atleast one chip each hand. The exact amount for each hand has to declared before receiving cards. This amount can be randomly chosen (Class: RandomBettingStrategy) or simply bet 10 chips every time (Class: SimpleBettingStrategy) or follow martingale approach (Class: MartingaleBettingStrategy).
+**3. Betting strategy (Interface: BettingStrategy):** Player has to bet atleast one chip each hand. The exact amount for each hand has to declared before receiving cards. This amount can be randomly chosen (Class: RandomBettingStrategy) or simply bet 10 chips every time (Class: SimpleBettingStrategy) or follow martingale approach (Class: MartingaleBettingStrategy).
 				
 
 ####II. Participants:
