@@ -61,6 +61,7 @@ Table, Deck (/Shoe) and Cards are the resources (package: resources). Table has 
 Contains utilities required for the game. The main idea behind this to keep it expandable. However, they are not the extenstion points for the game. For example: print is used to print to System.out but more advanced packages like logger can be used to further enhance the code.
 
 One line description of the included classes:
+----
 ```
 src
   gameController 
