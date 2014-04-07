@@ -21,7 +21,7 @@ Execute the runnable jar file
 
 
 ```
-git clone $URL
+git clone https://github.com/ravicm/blackJack.git
 cd blackJack
 java -jar run/InsightBlackJack.jar
 ```
