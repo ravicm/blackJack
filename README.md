@@ -14,7 +14,7 @@ It is pretty clear from above references that the play is conducted in several v
 - Split allowed only once
 - Doubling is not allowed after Split.
 
-How to play:
+###How to play:
 -----------
 
 You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code that answers Yes/No based on chosen playing strategy.
@@ -25,9 +25,9 @@ The questions are as follows:
 -  Hit(y)/Stand(n)
 (Process repeats)
 
+###Overview of the code:
+---------
 
-Overview of the code:
-----
 
 ###The code is divided into four packages:
 
@@ -46,7 +46,7 @@ Sample simulators included are:
 **3. Betting strategy (Interface: BettingStrategy):** Player has to bet atleast one chip each hand. The exact amount for each hand has to declared before receiving cards. This amount can be randomly chosen (Class: RandomBettingStrategy) or simply bet 10 chips every time (Class: SimpleBettingStrategy) or follow martingale approach (Class: MartingaleBettingStrategy).
 				
 
-####II. Participants:
+####I. Participants:
 
 Two kinds of participants (package: participants) - Dealer and a Player. A good number of attributes are custimizable. Player's initial amount, betting strategy, Dealer's Payout ratio can be set in the Game.java.
 
