@@ -15,6 +15,7 @@ It is pretty clear from above references that the play is conducted in several v
 - Doubling is not allowed after Split.
 
 How to play:
+-----------
 
 You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code that answers Yes/No based on chosen playing strategy.
 
@@ -26,10 +27,11 @@ The questions are as follows:
 
 
 Overview of the code:
+----
 
-The code is divided into four packages:
+###The code is divided into four packages:
 
-I. Extensible: 
+####I. Extensible: 
 
 This contains  interfaces to extension points of the game. A sample class has been provided and used. You can choose to extend the game by implementing the provided interfaces. A brief description of extenstion points is given below:
 
@@ -44,17 +46,17 @@ Sample simulators included are:
 3. Betting strategy (Interface: BettingStrategy): Player has to bet atleast one chip each hand. The exact amount for each hand has to declared before receiving cards. This amount can be randomly chosen (Class: RandomBettingStrategy) or simply bet 10 chips every time (Class: SimpleBettingStrategy) or follow martingale approach (Class: MartingaleBettingStrategy).
 				
 
-II. Participants:
+####II. Participants:
 
 Two kinds of participants (package: participants) - Dealer and a Player. A good number of attributes are custimizable. Player's initial amount, betting strategy, Dealer's Payout ratio can be set in the Game.java.
 
 
-III. Resources: 
+####III. Resources: 
 
 Table, Deck (/Shoe) and Cards are the resources (package: resources). Table has a customizable Dealer to which a customizable player can walk in to play the fame.
 
 
-IV: Util:
+####IV: Util:
 
 Contains utilities required for the game. The main idea behind this to keep it expandable. However, they are not the extenstion points for the game. For example: print is used to print to System.out but more advanced packages like logger can be used to further enhance the code.
 
