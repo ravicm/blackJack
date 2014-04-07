@@ -1,4 +1,4 @@
-blackJack
+BlackJack
 =========
 
 Text-based blackJack game
@@ -14,7 +14,7 @@ It is pretty clear from above references that the play is conducted in several v
 - Split allowed only once
 - Doubling is not allowed after Split.
 
-###How to play:
+##How to play:
 -----------
 
 You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code that answers Yes/No based on chosen playing strategy.
@@ -25,7 +25,7 @@ The questions are as follows:
 -  Hit(y)/Stand(n)
 (Process repeats)
 
-###Overview of the code:
+##Overview of the code:
 ---------
 
 
