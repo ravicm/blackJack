@@ -13,6 +13,7 @@ It is pretty clear from above references that the play is conducted in several v
 - Dealer stands on all 17's including soft 17.
 - Split allowed only once
 - Doubling is not allowed after Split.
+- I assume only one player and one dealer (code can be easily extended to mutliple players though).
 
 ##How to play:
 ----------
@@ -26,17 +27,19 @@ cd blackJack
 java -jar run/InsightBlackJack.jar
 ```
 
-You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code to answers Yes/No. A Yes/No is based on [playing strategy](i-extensible) chosen (see below). To run the simulation, use following:
+You can choose to play the game by answering Yes/No at command prompt. However, a simulation is already included in the code to answer a Yes/No. A Yes/No is based on [playing strategy](i-extensible) chosen (see below). To run the simulation, use following:
 
 ```
 java -jar run/InsightBlackJackRandomSimulation.jar
 ```
 
-The questions are as follows:
+The questions asked, during the play, are as follows:
 -  Are you ready to start the game?
 -  Do you want to double down?
 -  Hit(y)/Stand(n)
 (Process repeats)
+
+The info shown during the play is: your hand, your bet amount, your remaining chips, dealer hand
 
 ##Overview of the code:
 ---------
@@ -46,7 +49,7 @@ The questions are as follows:
 
 ####I. Extensible: 
 
-This contains  interfaces to extension points of the game. A sample class has been provided and used. You can choose to extend the game by implementing the provided interfaces. A brief description of extenstion points is given below:
+This contains  interfaces to extension points of the game. A sample class implementing interface has been provided and used. You can choose to extend the game by implementing the provided interfaces. A brief description of extenstion points is given below:
 
 **1. Playing strategy (Interface: Simulator):** Given a hand and one card of dealer. You can plan to take a hit or stand by implementing Simulator to say Yes/No for hit/stand. 
 Sample simulators included are: 
@@ -54,19 +57,19 @@ Sample simulators included are:
   1. Random simulator (Class: RandomSimulator) choses Hit/Stand randomly.  
   2. Smart simulator (Class: SmartSimulator) is not completely implemented but the idea is to let you decide intellegintly based on hand and dealer card.
 
-**2. Payout Ratio (Interface: PaymentRatio):** Some casinos pay 3:2 if player gets blackjack some dont. Some casinos pay 1:2 if dealer is busted. You can implement the interface PaymentRatio. Sample PaymentRatio's implemented is SimplePaymentRatio.
+**2. Payout Ratio (Interface: PaymentRatio):** Some casinos pay 3:2 if player gets blackjack some dont. Some casinos pay 1:2 if dealer is busted. You can implement the interface PaymentRatio. A sample class that implements PaymentRatio ( SimplePaymentRatio) is included.
 
 **3. Betting strategy (Interface: BettingStrategy):** Player has to bet atleast one chip each hand. The exact amount for each hand has to declared before receiving cards. This amount can be randomly chosen (Class: RandomBettingStrategy) or simply bet 10 chips every time (Class: SimpleBettingStrategy) or follow martingale approach (Class: MartingaleBettingStrategy).
 				
 
-####I. Participants:
+####II. Participants:
 
 Two kinds of participants (package: participants) - Dealer and a Player. A good number of attributes are custimizable. Player's initial amount, betting strategy, Dealer's Payout ratio can be set in the Game.java.
 
 
 ####III. Resources: 
 
-Table, Deck (/Shoe) and Cards are the resources (package: resources). Table has a customizable Dealer to which a customizable player can walk in to play the fame.
+Table, Deck (/Shoe) and Cards are the resources (package: resources). Table has a customizable Dealer to which a customizable player can walk for a hand.
 
 
 ####IV: Util:
